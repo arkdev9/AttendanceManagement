@@ -1,24 +1,23 @@
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="ISO-8859-1" />
-	<link href="css/styles.css" rel="stylesheet" />
-	<title>Spring Boot Application</title>
-</head> -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 	<meta name="generator" content="Jekyll v3.8.5">
-	<title>Edmodo | Home</title>
+	<title>Edmodo | View</title>
 
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+	<script type="text/javascript"
+		src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8">
+	</script>
 	<style>
 		.bd-placeholder-img {
 			font-size: 1.125rem;
@@ -35,6 +34,8 @@
 			}
 		}
 	</style>
+	<!-- Custom styles for this template -->
+	<link href="jumbotron.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,8 +48,8 @@
 
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home<span class="sr-only"></span></a>
+				<li class="nav-item">
+					<a class="nav-link" href="./home.html">Home<span class="sr-only"></span></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="./events.html">Events<span class="sr-only"></span></a>
@@ -62,8 +63,8 @@
 				<li class="nav-item">
 					<a class="nav-link" href="./delete.html">Delete<span class="sr-only"></span></a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./view.html">View<span class="sr-only"></span></a>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">View<span class="sr-only"></span></a>
 				</li>
 			</ul>
 		</div>
@@ -74,42 +75,63 @@
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
 			<div class="container">
-				<h1 class="display-3">Welcome!</h1>
-				<p>This is a template for a simple marketing or informational website. It includes a large callout
-					called a jumbotron and three supporting pieces of content. Use it as a starting point to create
-					something more unique.</p>
+				<h1 class="display-3">Attendance</h1>
+				<p>The attendance details of the students that are part of the event organising committee are displayed
+					in the table below.</p>
 			</div>
 		</div>
 
 		<div class="container">
-			<!-- Example row of columns -->
-			<div class="row">
-				<div class="col-md-4">
-					<h2>Up coming events</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-						mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-						magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-				</div>
-				<div class="col-md-4">
-					<h2>New members</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-						mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-						magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-				</div>
-				<div class="col-md-4">
-					<h2>Attendence</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id
-						ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-						condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+			<div class="row" style="margin-bottom: 3em;">
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Select Year
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" id="1">I Year</a>
+						<a class="dropdown-item" id="2">II Year</a>
+						<a class="dropdown-item" id="3">III Year</a>
+						<a class="dropdown-item" id="4">IV Year</a>
+					</div>
 				</div>
 			</div>
-
-			<hr>
-
-		</div> <!-- /container -->
+			<div class="row" style="margin-bottom: 3em;">
+				<h3 id="year">I Year Attendance</h3>
+			</div>
+			<div class="row" id="table">
+				<table class="table">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">First Name</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">Attendance(%)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Ritesh</td>
+							<td>Kumar</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Sneha</td>
+							<td>Gupta</td>
+							<td>60</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Harris</td>
+							<td>Sohail</td>
+							<td>57</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 
 	</main>
 
@@ -124,12 +146,6 @@
 	</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script>
-		window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
 	</script>
 	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
