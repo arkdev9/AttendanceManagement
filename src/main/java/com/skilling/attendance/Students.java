@@ -12,6 +12,9 @@ public class Students {
 	private Integer id;
 	private String name;
 	private String email;
+	private String branch;
+	private Integer attendance;
+	private String year;
 
 	public Integer getId() {
 		return id;
@@ -35,6 +38,18 @@ public class Students {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getBranch() {
+		return this.branch;
+	}
+
+	public Integer getAttendance() {
+		return this.attendance;
+	}
+
+	public String getYear() {
+		return this.year;
 	}
 
 }

@@ -3,10 +3,6 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-	<meta name="generator" content="Jekyll v3.8.5">
 	<title>Edmodo | View</title>
 
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
@@ -15,12 +11,9 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-	<script type="text/javascript"
-		src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8">
-	</script>
 	<style>
 		.bd-placeholder-img {
-			font-size: 1.125rem;
+			font-size: 1.2em;
 			text-anchor: middle;
 			-webkit-user-select: none;
 			-moz-user-select: none;
@@ -30,7 +23,14 @@
 
 		@media (min-width: 768px) {
 			.bd-placeholder-img-lg {
-				font-size: 3.5rem;
+				font-size: 3.5em;
+			}
+
+			.tab-content {
+				border-left: 1px solid #ddd;
+				border-right: 1px solid #ddd;
+				border-bottom: 1px solid #ddd;
+				padding: 10px;
 			}
 		}
 	</style>
@@ -80,59 +80,106 @@
 					in the table below.</p>
 			</div>
 		</div>
-
 		<div class="container">
-			<div class="row" style="margin-bottom: 3em;">
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Select Year
-					</button>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" id="1">I Year</a>
-						<a class="dropdown-item" id="2">II Year</a>
-						<a class="dropdown-item" id="3">III Year</a>
-						<a class="dropdown-item" id="4">IV Year</a>
+			<div class="row" style="margin-bottom: 2em;">
+				<h3>Student Attendance</h3>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<ul class="nav nav-tabs">
+						<li class="nav-item">
+							<a class="nav-link active" href="#first" role="tab" data-toggle="tab">I Year Student's
+								Attendance</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#second" role="tab" data-toggle="tab">II Year Student's
+								Attendance</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#third" role="tab" data-toggle="tab">III Year Student's
+								Attendance</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 align-center">
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade show active" id="first">
+							<table class="table">
+								<thead class="thead-dark">
+									<tr>
+										<th scope="col">Roll Number</th>
+										<th scope="col">Name</th>
+										<th scope="col">Email</th>
+										<th scope="col">Attendance(%)</th>
+										<th scope="col">Branch</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="student: ${firstStudents}">
+										<th th:text="${student.id}" scope="row"></th>
+										<td th:text="${student.name}"></td>
+										<td th:text="${student.email}"></td>
+										<td th:text="${student.attendance}"></td>
+										<td th:text="${student.branch}"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div role="tabpanel" class="tab-pane fade" id="second">
+							<table class="table">
+								<thead class="thead-dark">
+									<tr>
+										<th scope="col">Roll Number</th>
+										<th scope="col">Name</th>
+										<th scope="col">Email</th>
+										<th scope="col">Attendance(%)</th>
+										<th scope="col">Branch</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="student: ${secondStudents}">
+										<th th:text="${student.id}" scope="row"></th>
+										<td th:text="${student.name}"></td>
+										<td th:text="${student.email}"></td>
+										<td th:text="${student.attendance}"></td>
+										<td th:text="${student.branch}"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div role="tabpanel" class="tab-pane fade" id="third">
+							<table class="table">
+								<thead class="thead-dark">
+									<tr>
+										<th scope="col">Roll Number</th>
+										<th scope="col">Name</th>
+										<th scope="col">Email</th>
+										<th scope="col">Attendance(%)</th>
+										<th scope="col">Branch</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="student: ${thirdStudents}">
+										<th th:text="${student.id}" scope="row"></th>
+										<td th:text="${student.name}"></td>
+										<td th:text="${student.email}"></td>
+										<td th:text="${student.attendance}"></td>
+										<td th:text="${student.branch}"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row" style="margin-bottom: 3em;">
-				<h3 id="year">I Year Attendance</h3>
-			</div>
-			<div class="row" id="table">
-				<table class="table">
-					<thead class="thead-dark">
-						<tr>
-							<th scope="col">#</th>
-							<th scope="col">First Name</th>
-							<th scope="col">Last Name</th>
-							<th scope="col">Attendance(%)</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Ritesh</td>
-							<td>Kumar</td>
-							<td>90</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Sneha</td>
-							<td>Gupta</td>
-							<td>60</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Harris</td>
-							<td>Sohail</td>
-							<td>57</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
 		</div>
-
 	</main>
 
 	<footer class="container">
@@ -146,9 +193,6 @@
 	</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
-	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
 	</script>
 </body>
 
