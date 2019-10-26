@@ -2,77 +2,17 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
 	<title>Edmodo | View</title>
-
-	<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
-
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-	<style>
-		.bd-placeholder-img {
-			font-size: 1.2em;
-			text-anchor: middle;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-		}
-
-		@media (min-width: 768px) {
-			.bd-placeholder-img-lg {
-				font-size: 3.5em;
-			}
-
-			.tab-content {
-				border-left: 1px solid #ddd;
-				border-right: 1px solid #ddd;
-				border-bottom: 1px solid #ddd;
-				padding: 10px;
-			}
-		}
-	</style>
-	<!-- Custom styles for this template -->
-	<link href="jumbotron.css" rel="stylesheet">
+	<th:block th:include="fragments/headerfiles.html :: headerfiles">
+	</th:block>
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-		<a class="navbar-brand" href="#">Edmodo</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="./home.html">Home<span class="sr-only"></span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./events.html">Events<span class="sr-only"></span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./add.html">Add<span class="sr-only"></span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./update.html">Update<span class="sr-only"></span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./delete.html">Delete<span class="sr-only"></span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">View<span class="sr-only"></span></a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+	<th:block th:include="fragments/navbar.html :: navbar">
+	</th:block>
 
 	<main role="main">
 
-		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
 			<div class="container">
 				<h1 class="display-3">Attendance</h1>
@@ -183,7 +123,7 @@
 	</main>
 
 	<footer class="container">
-		<p>&copy; Company 2017-2019</p>
+		<p>&copy; Frontier Labs 2019</p>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

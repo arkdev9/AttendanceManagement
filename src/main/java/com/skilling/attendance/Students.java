@@ -16,28 +16,40 @@ public class Students {
 	private Integer attendance;
 	private String year;
 
-	public Integer getId() {
-		return id;
-	}
-
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public String getName() {
-		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public void setBranch(String branch) {
+		this.branch = branch;
+	}
+
+	public void setAttendance(Integer att) {
+		this.attendance = att;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getEmail() {
+		return email;
 	}
 
 	public String getBranch() {
