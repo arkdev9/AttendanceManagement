@@ -23,30 +23,12 @@
 		<div class="container">
 			<h3 style="padding-bottom: 1em;">Upcoming events:</h3>
 			<div class="list-group">
-				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+				<a th:each="event: ${events}" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
 					<div class="d-flex w-100 justify-content-between">
-						<h5 style="color: black">Ugadi</h5>
-						<small>10 days ago</small>
+						<h5 th:text="${event.name}" style="color: black">Ugadi</h5>
+						<small th:text="${event.date}"></small>
 					</div>
-					<p class="mb-1">It is celebrated as the New Year day of the Telegu and Kannada and the people of
-						Maharashtra. Ugadi is celebrated around month of April.</p>
-				</a>
-				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 style="color: black">Sankranti</h5>
-						<small class="text-muted">5 days ago</small>
-					</div>
-					<p class="mb-1">Sankranti means transmigration of the Sun from one Rāshi (constellation of the
-						zodiac in Indian astronomy) to the next. Hence, there are 12 Sankrantis in a year.</p>
-				</a>
-				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 style="color: black">Teacher's Day</h5>
-						<small class="text-muted">3 days ago</small>
-					</div>
-					<p class="mb-1">Teachers' Day is a special day for the appreciation of teachers, and may include
-						celebrations to honor them for their special contributions in a particular field area, or the
-						community in general.</p>
+					<p th:text="${event.organiser}" class="mb-1"></p>
 				</a>
 			</div>
 		</div>

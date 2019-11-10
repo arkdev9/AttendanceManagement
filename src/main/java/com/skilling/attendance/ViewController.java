@@ -1,16 +1,22 @@
 package com.skilling.attendance;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ViewController {
 
 	@Autowired
 	private StudentsRepository studentsRepository;
+
+	@Autowired
+	EventsRepository eventsRepository;
 
 	@RequestMapping("/")
 	public String welcome() {
@@ -26,8 +32,8 @@ public class ViewController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public String addStudentToRegister() {
-		return new String("add");
+	public String add() {
+		return "add";
 	}
 
 	@RequestMapping("/delete")
@@ -36,7 +42,8 @@ public class ViewController {
 	}
 
 	@RequestMapping("/events")
-	public String events() {
+	public String events(Model model) {
+		model.addAttribute("events", eventsRepository.getAllEvents());
 		return "events";
 	}
 
