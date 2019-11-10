@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ViewController {
@@ -29,6 +30,17 @@ public class ViewController {
 		model.addAttribute("secondStudents", studentsRepository.findStudentsByYear("2"));
 		model.addAttribute("thirdStudents", studentsRepository.findStudentsByYear("3"));
 		return "view";
+	}
+
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String register(Model model) {
+		model.addAttribute("events", eventsRepository.findAll());
+		return "register";
+	}
+
+	@RequestMapping(value = "/add-event", method = RequestMethod.GET)
+	public String addEvent() {
+		return "add-event";
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)

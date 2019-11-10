@@ -10,11 +10,16 @@ public class Students {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
+	private String roll;
 	private String name;
 	private String email;
 	private String branch;
 	private Integer attendance;
 	private String year;
+
+	public void setRoll(String roll) {
+		this.roll = roll;
+	}
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -62,6 +67,10 @@ public class Students {
 
 	public String getYear() {
 		return this.year;
+	}
+
+	public String getRoll() {
+		return this.roll;
 	}
 
 }

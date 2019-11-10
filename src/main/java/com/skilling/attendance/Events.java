@@ -16,10 +16,15 @@ public class Events {
 	private Integer id;
 	private String name;
 	private Date date;
+	private String description;
 	private String organisers;
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void setDesc(String description) {
+		this.description = description;
 	}
 
 	public void setDate(Date date) {
@@ -54,6 +59,10 @@ public class Events {
 		}
 
 		return parsed;
+	}
+
+	public String getDesc() {
+		return this.description;
 	}
 
 }

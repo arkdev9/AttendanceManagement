@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<title>Edmodo | View</title>
+	<title>Edmodo | Add</title>
 	<th:block th:include="fragments/headerfiles.html :: headerfiles">
 	</th:block>
 </head>
@@ -16,36 +16,43 @@
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
 			<div class="container">
-				<h1 class="display-3">Events</h1>
-				<p>Check this tab to be notified of the upcoming events.</p>
+				<h1 class="display-3">Add Members</h1>
+				<p>Add member to an event</p>
 			</div>
 		</div>
 		<div class="container">
-			<h3 style="padding-bottom: 1em;">Upcoming events:</h3>
-			<div class="list-group">
-				<a th:each="event: ${events}" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 th:text="${event.name}" style="color: black"></h5>
-						<small th:text="${event.date}"></small>
+			<h3 style="padding-bottom: 1em;">Enter details</h3>
+			<form action="/register" method="POST">
+				<div class="row mt-2">
+					<div class="col-md-6">
+						<input name="roll_number" type="text" class="form-control" placeholder="Roll Number">
 					</div>
-					<p th:text="${event.organiser}" class="mb-1"></p>
-				</a>
-			</div>
+					<div class="col-md-6">
+						<select name="event" class="form-control">
+							<option th:each="event : ${events}" th:value="${event.name}" th:utext="${event.name}" />
+					</div>
+					</select>
+				</div>
+		</div>
+		<div class="mt-2">
+			<button class="btn btn-primary">Submit</button>
+		</div>
+		</form>
 		</div>
 	</main>
 
 	<footer class="container">
-		<p>&copy; Company 2017-2019</p>
+		<p>&copy; Frontier Labs 2019</p>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
+		</script>
 </body>
 
 </html>
