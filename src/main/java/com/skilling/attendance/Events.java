@@ -9,12 +9,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity // This tells Hibernate to make a table out of this class
 public class Events {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String name;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date date;
 	private String description;
 	private String organisers;
@@ -23,7 +26,7 @@ public class Events {
 		this.name = name;
 	}
 
-	public void setDesc(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 
@@ -44,6 +47,10 @@ public class Events {
 		this.organisers = parsed;
 	}
 
+	public Integer getId() {
+		return this.id;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -61,7 +68,7 @@ public class Events {
 		return parsed;
 	}
 
-	public String getDesc() {
+	public String getDescription() {
 		return this.description;
 	}
 

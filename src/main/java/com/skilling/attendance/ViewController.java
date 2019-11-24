@@ -1,14 +1,13 @@
 package com.skilling.attendance;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ViewController {
@@ -48,6 +47,12 @@ public class ViewController {
 		return "add";
 	}
 
+	@RequestMapping(value = "/event/{id}", method = RequestMethod.GET)
+	public String event(@PathVariable("id") int id, Model model) {
+		eventsRepository.findById(id).ifPresent(o -> model.addAttribute("event", o));
+		return "event";
+	}
+
 	@RequestMapping("/delete")
 	public String delete() {
 		return "delete";
@@ -55,7 +60,8 @@ public class ViewController {
 
 	@RequestMapping("/events")
 	public String events(Model model) {
-		model.addAttribute("events", eventsRepository.getAllEvents());
+		Iterable<Events> events = eventsRepository.findAll();
+		model.addAttribute("events", events);
 		return "events";
 	}
 

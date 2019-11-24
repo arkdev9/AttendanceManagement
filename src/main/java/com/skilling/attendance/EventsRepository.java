@@ -12,10 +12,10 @@ import com.skilling.attendance.Events;
 
 public interface EventsRepository extends CrudRepository<Events, Integer> {
 
-	@Query("SELECT s FROM Events s")
-	public Collection<Events> getAllEvents();
-
 	@Query("SELECT e FROM Events e WHERE e.name=?1")
 	public Collection<Events> getEventOrganisers(String name);
+
+	@Query("SELECT e FROM Events e WHERE e.id=?1")
+	public Events getEventById(Integer id);
 
 }
