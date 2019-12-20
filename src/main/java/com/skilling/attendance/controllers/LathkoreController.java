@@ -39,8 +39,27 @@ public class LathkoreController {
 	}
 
 	@PostMapping(path = "/event/take-attendance/{id}")
-	public RedirectView takeAttendance(RegisterForm attendanceForm) {
-
+	public RedirectView takeAttendance(@PathVariable("id") Integer eventId, RegisterForm attendanceForm) {
+		ArrayList<String> attendedStudents = attendanceForm.getStudents();
+		// We get list of students that have attended
+		// Get list of students in that event
+		Collection<Organising> organisers = organisingRepository.getEventOrganisers(eventId);
+		for (Organising organiser : organisers) {
+			boolean attended = false;
+			for (String roll : attendedStudents) {
+				if (roll.equals(organiser.getRoll())) {
+					// Attended so add to database
+					// This is the dirtiest thing I've ever written
+					attended = true;
+				}
+			}
+			Attendance attendance = new Attendance();
+			attendance.setAttended(attended);
+			attendance.setDate(attendanceForm.getDate());
+			attendance.setEventId(eventId);
+			attendance.setRoll(organiser.getRoll());
+			attendanceRepository.save(attendance);
+		}
 		return new RedirectView("/");
 	}
 
