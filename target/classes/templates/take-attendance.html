@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Edmodo | Take Attendance</title>
+    <th:block th:include="fragments/headerfiles.html :: headerfiles">
+    </th:block>
+</head>
+
+<body>
+<th:block th:include="fragments/navbar.html :: navbar">
+</th:block>
+
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 th:text="${event.name}" class="display-3"></h1>
+            <h1 th:text="${event.date}" class="display-5"></h1>
+            <p>Add member to an event</p>
+        </div>
+    </div>
+    <div class="container">
+        <h3 style="padding-bottom: 1em;">Enter details</h3>
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <form th:action="@{/event/take-attendance/{id}(id=${event.id})}" action=""
+                      POST>
+                    <table class="table">
+                        <thead>
+                        <th>Roll Number</th>
+                        <th>Attended</th>
+                        </thead>
+                        <tbody>
+                        <tr th:each="rollNumber : ${rollNumbers}">
+                            <!--                            Checkbox for each roll number-->
+                            <td th:text="${rollNumber}"></td>
+                            <td><input th:name="${rollNumber}" type="checkbox"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <div class="mt-2">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<th:block th:include="fragments/footer.html :: footer">
+</th:block>
+</body>
+
+</html>

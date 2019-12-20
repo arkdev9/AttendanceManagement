@@ -1,23 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70d05a03-cd6d-47ce-b317-b00d7314dae5" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="70d05a03-cd6d-47ce-b317-b00d7314dae5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_Release.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/controllers/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/controllers/LathkoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/controllers/ViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/forms/AttendanceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/take-attendance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/Events.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/EventsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/LathkoreController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/Students.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/StudentsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/ViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skilling/attendance/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-event.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/skilling/attendance/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/skilling/attendance/Events.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/skilling/attendance/EventsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/skilling/attendance/LathkoreController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/skilling/attendance/Students.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/skilling/attendance/StudentsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/skilling/attendance/ViewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/skilling/attendance/WebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/skilling/attendance/WebApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/add-event.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add-event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/skilling/attendance/DemoApplicationTests.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Remote Attendance Server" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Remote Attendance Server" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Remote Attendance Server" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sql12313306: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Remote Attendance Server" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sql12313306: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="attendance: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Remote Attendance Server" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sql12313306: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="event: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Remote Attendance Server" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sql12313306: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="organising: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1T9LOTk1rnu3FgQlmPKNebq1XTn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ExpandSpringBootSpringBootSettingsPanel" value="false" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -30,27 +160,40 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.32988507" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.skilling.attendance" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="attendance" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.skilling.attendance.WebApplication" />
+      <option name="DEBUG_MODE" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -63,6 +206,12 @@
       <option name="presentableId" value="Default" />
       <updated>1572867334083</updated>
       <workItem from="1572867345357" duration="676000" />
+      <workItem from="1574819629323" duration="67000" />
+      <workItem from="1574819753809" duration="652000" />
+      <workItem from="1575114806706" duration="2835000" />
+      <workItem from="1575171166886" duration="4276000" />
+      <workItem from="1576757112182" duration="2039000" />
+      <workItem from="1576760063277" duration="8616000" />
     </task>
     <servers />
   </component>
@@ -74,10 +223,142 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="880" y="336" key="#Java" timestamp="1576761665265">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="880" y="336" key="#Java/0.0.2560.1440@0.0.2560.1440" timestamp="1576761665265" />
+    <state x="880" y="385" width="814" height="669" key="#Project_Structure" timestamp="1576759459205">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="880" y="385" width="814" height="669" key="#Project_Structure/0.0.2560.1440@0.0.2560.1440" timestamp="1576759459205" />
+    <state x="744" y="381" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576766927728">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="744" y="381" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1576766927728" />
+    <state x="1093" y="430" key="#com.intellij.ide.util.MemberChooser" timestamp="1576761783701">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1093" y="430" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1576761783701" />
+    <state x="1017" y="510" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576759394989">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1017" y="510" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1576759394989" />
+    <state x="891" y="378" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1575115326131">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="891" y="378" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1575115326131" />
+    <state x="893" y="646" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1576759990439">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="893" y="646" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1576759990439" />
+    <state x="1041" y="584" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1576759951016">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1041" y="584" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.2560.1440@0.0.2560.1440" timestamp="1576759951016" />
+    <state x="1018" y="473" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576807751291">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1018" y="473" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1576807751291" />
+    <state x="1018" y="474" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1576768244444">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1018" y="474" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1576768244444" />
+    <state width="2518" height="332" key="GridCell.Tab.0.bottom" timestamp="1576808056142">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="332" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1576808056142" />
+    <state width="2518" height="332" key="GridCell.Tab.0.bottom/0.23.2560.1339@0.23.2560.1339" timestamp="1576806995951" />
+    <state width="2518" height="332" key="GridCell.Tab.0.center" timestamp="1576808056141">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="332" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1576808056141" />
+    <state width="2518" height="332" key="GridCell.Tab.0.center/0.23.2560.1339@0.23.2560.1339" timestamp="1576806995950" />
+    <state width="2518" height="332" key="GridCell.Tab.0.left" timestamp="1576808056140">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="332" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1576808056140" />
+    <state width="2518" height="332" key="GridCell.Tab.0.left/0.23.2560.1339@0.23.2560.1339" timestamp="1576806995950" />
+    <state width="2518" height="332" key="GridCell.Tab.0.right" timestamp="1576808056141">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="332" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1576808056141" />
+    <state width="2518" height="332" key="GridCell.Tab.0.right/0.23.2560.1339@0.23.2560.1339" timestamp="1576806995950" />
+    <state width="2518" height="332" key="GridCell.Tab.1.bottom" timestamp="1576808056143">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="332" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1576808056143" />
+    <state width="2518" height="332" key="GridCell.Tab.1.bottom/0.23.2560.1339@0.23.2560.1339" timestamp="1576806995952" />
+    <state width="2518" height="332" key="GridCell.Tab.1.center" timestamp="1576808056142">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="332" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1576808056142" />
+    <state width="2518" height="332" key="GridCell.Tab.1.center/0.23.2560.1339@0.23.2560.1339" timestamp="1576806995952" />
+    <state width="2518" height="332" key="GridCell.Tab.1.left" timestamp="1576808056142">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="332" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1576808056142" />
+    <state width="2518" height="332" key="GridCell.Tab.1.left/0.23.2560.1339@0.23.2560.1339" timestamp="1576806995951" />
+    <state width="2518" height="332" key="GridCell.Tab.1.right" timestamp="1576808056143">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="332" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1576808056143" />
+    <state width="2518" height="332" key="GridCell.Tab.1.right/0.23.2560.1339@0.23.2560.1339" timestamp="1576806995952" />
+    <state width="2518" height="500" key="GridCell.Tab.2.bottom" timestamp="1576760034593">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="500" key="GridCell.Tab.2.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1576760034593" />
+    <state width="2518" height="500" key="GridCell.Tab.2.center" timestamp="1576760034592">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="500" key="GridCell.Tab.2.center/0.0.2560.1440@0.0.2560.1440" timestamp="1576760034592" />
+    <state width="2518" height="500" key="GridCell.Tab.2.left" timestamp="1576760034592">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="500" key="GridCell.Tab.2.left/0.0.2560.1440@0.0.2560.1440" timestamp="1576760034592" />
+    <state width="2518" height="500" key="GridCell.Tab.2.right" timestamp="1576760034593">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="500" key="GridCell.Tab.2.right/0.0.2560.1440@0.0.2560.1440" timestamp="1576760034593" />
+    <state width="249" height="539" key="HiddenNamespacesPopup" timestamp="1576758458747">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="249" height="539" key="HiddenNamespacesPopup/0.0.2560.1440@0.0.2560.1440" timestamp="1576758458747" />
+    <state x="768" y="300" key="SettingsEditor" timestamp="1576761360087">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="768" y="300" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1576761360087" />
+    <state x="1174" y="588" width="348" height="264" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1575176751272">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1174" y="588" width="348" height="264" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.2560.1440@0.0.2560.1440" timestamp="1575176751272" />
+    <state x="1009" y="405" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1576765091772">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1009" y="405" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1576765091772" />
+    <state x="940" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1576757116523">
+      <screen x="0" y="23" width="2560" height="1339" />
+    </state>
+    <state x="940" y="524" key="com.intellij.ide.util.TipDialog/0.23.2560.1339@0.23.2560.1339" timestamp="1576757116523" />
+    <state x="1062" y="639" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576757202878">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1062" y="639" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1440@0.0.2560.1440" timestamp="1576757202878" />
+    <state x="945" y="345" key="run.anything.popup" timestamp="1576766902542">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="945" y="345" key="run.anything.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1576766902542" />
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1576804630386">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1576804630386" />
   </component>
 </project>

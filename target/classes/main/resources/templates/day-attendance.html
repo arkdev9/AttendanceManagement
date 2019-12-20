@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Edmodo | View</title>
+    <th:block th:include="fragments/headerfiles.html :: headerfiles">
+    </th:block>
+</head>
+
+<body>
+<th:block th:include="fragments/navbar.html :: navbar">
+</th:block>
+
+<main role="main">
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Attendance</h1>
+            <p>The attendance details of an event for this date</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-bottom: 2em;">
+            <h3>Student Attendance</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-12 align-center">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade show active" id="first">
+                        <table class="table">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Roll Number</th>
+                                <th scope="col">Present</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="student: ${firstStudents}">
+                                <th th:text="${attendance.roll}"></th>
+                                <td th:text="${attendance.attended}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<th:block th:include="fragments/footer.html :: footer">
+</th:block>
+</body>
+
+</html>

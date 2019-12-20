@@ -1,139 +1,64 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Edmodo | View</title>
-	<th:block th:include="fragments/headerfiles.html :: headerfiles">
-	</th:block>
+    <title>Edmodo | View</title>
+    <th:block th:include="fragments/headerfiles.html :: headerfiles">
+    </th:block>
 </head>
 
 <body>
-	<th:block th:include="fragments/navbar.html :: navbar">
-	</th:block>
+<th:block th:include="fragments/navbar.html :: navbar">
+</th:block>
 
-	<main role="main">
+<main role="main">
 
-		<div class="jumbotron">
-			<div class="container">
-				<h1 class="display-3">Attendance</h1>
-				<p>The attendance details of the students that are part of the event organising committee are displayed
-					in the table below.</p>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row" style="margin-bottom: 2em;">
-				<h3>Student Attendance</h3>
-			</div>
-			<div class="row">
-				<div class="col-12 align-center">
-					<ul class="nav nav-tabs">
-						<li class="nav-item">
-							<a class="nav-link active" href="#first" role="tab" data-toggle="tab">I Year Student's
-								Attendance</a>
-						</li>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Attendance</h1>
+            <p>The attendance details of the students that are part of the event organising committee are displayed
+                in the table below.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-bottom: 2em;">
+            <h3>Student Attendance</h3>
+        </div>
+        <div class="row">
+            <div class="col-12 align-center">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#third" role="tab" data-toggle="tab">III Year Student's
+                            Attendance</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-						<li class="nav-item">
-							<a class="nav-link" href="#second" role="tab" data-toggle="tab">II Year Student's
-								Attendance</a>
-						</li>
+        <div class="row">
+            <div class="col-12 align-center">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Roll Number</th>
+                        <th th:each="date: ${dates}"><span th:text="${date}"></span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="key: ${thirdStudents.keySet()}">\
+                        <td th:text="${key}"></td>
+                        <td th:each="attendance: ${thirdStudents.get(key)}">
+                            <span th:text="${attendance.attended}"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
 
-						<li class="nav-item">
-							<a class="nav-link" href="#third" role="tab" data-toggle="tab">III Year Student's
-								Attendance</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-12 align-center">
-					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane fade show active" id="first">
-							<table class="table">
-								<thead class="thead-dark">
-									<tr>
-										<th scope="col">Roll Number</th>
-										<th scope="col">Name</th>
-										<th scope="col">Email</th>
-										<th scope="col">Attendance(%)</th>
-										<th scope="col">Branch</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr th:each="student: ${firstStudents}">
-										<th th:text="${student.id}" scope="row"></th>
-										<td th:text="${student.name}"></td>
-										<td th:text="${student.email}"></td>
-										<td th:text="${student.attendance}"></td>
-										<td th:text="${student.branch}"></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<div role="tabpanel" class="tab-pane fade" id="second">
-							<table class="table">
-								<thead class="thead-dark">
-									<tr>
-										<th scope="col">Roll Number</th>
-										<th scope="col">Name</th>
-										<th scope="col">Email</th>
-										<th scope="col">Attendance(%)</th>
-										<th scope="col">Branch</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr th:each="student: ${secondStudents}">
-										<th th:text="${student.id}" scope="row"></th>
-										<td th:text="${student.name}"></td>
-										<td th:text="${student.email}"></td>
-										<td th:text="${student.attendance}"></td>
-										<td th:text="${student.branch}"></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<div role="tabpanel" class="tab-pane fade" id="third">
-							<table class="table">
-								<thead class="thead-dark">
-									<tr>
-										<th scope="col">Roll Number</th>
-										<th scope="col">Name</th>
-										<th scope="col">Email</th>
-										<th scope="col">Attendance(%)</th>
-										<th scope="col">Branch</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr th:each="student: ${thirdStudents}">
-										<th th:text="${student.id}" scope="row"></th>
-										<td th:text="${student.name}"></td>
-										<td th:text="${student.email}"></td>
-										<td th:text="${student.attendance}"></td>
-										<td th:text="${student.branch}"></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-
-	<footer class="container">
-		<p>&copy; Frontier Labs 2019</p>
-	</footer>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
+<th:block th:include="fragments/footer.html :: footer">
+</th:block>
 </body>
 
 </html>
